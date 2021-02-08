@@ -34,9 +34,9 @@ app.get('/content', async(req, res)=>{
 app.post('/content', async(req, res)=>{
   let request=req.body;
   let content=await knex('contents').insert(request);
-  // res.json(content);
+  res.json(content);
 
-  res.send('data berhasil di tambah');
+  // res.send('data berhasil di tambah');
 })
 
 app.put('/content/:id', async(req, res)=>{
@@ -44,7 +44,6 @@ app.put('/content/:id', async(req, res)=>{
   await knex('contents').where('id', id).update(req.body);
   res.json(res.body);
 
-  // res.send('data berhasil di update');
 })
 
 app.delete('/comment/:id', async(req, res)=>{
@@ -62,9 +61,8 @@ app.get('/comment', async(req, res)=>{
 app.post('/comment', async(req, res)=>{
   let request=req.body;
   let content=await knex('comments').insert(request);
-  // res.json(content);
+  res.json(content);
 
-  res.send('data berhasil di tambah');
 })
 
 app.put('/comment/:id', async(req, res)=>{
