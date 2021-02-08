@@ -1,0 +1,19 @@
+{
+  "name": "fathur",
+  "version": "1.0.0",
+  "description": "belajar",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "main": "index.js",
+  "author": "fathurzoy",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "knex": "^0.21.17",
+    "mysql": "^2.18.1",
+    "nodemon": "^2.0.7"
+  }
+}
